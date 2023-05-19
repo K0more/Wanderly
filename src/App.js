@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import styled from "styled-components";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
+
 
 const Container = styled.div`
   display: flex;
@@ -853,8 +857,12 @@ const AITravelPlanner = () => {
     setEmail(event.target.value);
   };
 
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
+
   return (
     <>
+
       <Container>
         <Main
           loading={loading}
@@ -1090,11 +1098,21 @@ const AITravelPlanner = () => {
               disabled={loading}
               className={loading ? "loading" : ""}
             ></GenerateButton>
+            <br></br>
+            { isAuthenticated ? (
+               <Button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+               Log Out
+             </Button>
+              ) : (
+              <Button onClick={() => loginWithRedirect()}>Log In</Button>
+            )}
           </FormContainer>
         </Panel>
       </Container>
     </>
+
   );
+
 };
 
 export default AITravelPlanner;
