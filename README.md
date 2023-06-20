@@ -66,18 +66,6 @@ REACT_APP_ENDPOINT_URL =
 
 ![Service design](https://i.imgur.com/Yq1B5vv.png)
 
-### How to contribute
-
-If you want to contribute to this project, please follow the steps below:
-
-1. Fork the repo
-
-2. Create a new branch
-
-3. Make your changes
-
-4. Create a pull request
-
 
 ### Acknowledgments
 
