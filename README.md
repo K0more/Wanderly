@@ -76,3 +76,5 @@ REACT_APP_ENDPOINT_URL =
 - [React](https://reactjs.org/) for the frontend
 
 - [Styled Components](https://styled-components.com/) for the styling
+
+### Reference taken from Atlogic Documentation :- https://www.altogic.com/blog/travel-planner-with-openai-chatgpt-api
